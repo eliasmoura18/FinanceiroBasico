@@ -16,6 +16,7 @@ namespace FinanceiroBasico.Model
 
         public Conta _conta;
 
+
         public ContaPaga(Conta conta)
         {
             _conta = conta;
