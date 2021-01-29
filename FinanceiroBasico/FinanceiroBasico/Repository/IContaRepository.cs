@@ -11,5 +11,7 @@ namespace FinanceiroBasico.Repository
         bool IsContaAtrasada(Conta contaEntity);
 
         int GetQtdeDiasAtraso(Conta contaEntity);
+
+        decimal GetJurosEMultaPorDiasAtraso(Conta contaEntity);
     }
 }
