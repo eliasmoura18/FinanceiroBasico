@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FinanceiroBasico.Model.Base;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
@@ -8,12 +9,8 @@ using System.Threading.Tasks;
 namespace FinanceiroBasico.Model
 {
     [Table("CONTA")]
-    public class Conta
+    public class Conta : BaseEntity
     {
-        [JsonIgnore]
-        [Column("id")]
-        public int id { get; set; }
-
         [Column("nome")]
         public string nome { get; set; }
 

@@ -8,10 +8,8 @@ namespace FinanceiroBasico.Repository
 {
     public interface IContaRepository
     {
-        Conta Create(Conta conta);
-        Conta FindById(int id);
-        List<Conta> FindAll();
-        Conta Update(Conta conta);
-        void Delete(int id);
+        bool IsContaAtrasada(Conta contaEntity);
+
+        int GetQtdeDiasAtraso(Conta contaEntity);
     }
 }

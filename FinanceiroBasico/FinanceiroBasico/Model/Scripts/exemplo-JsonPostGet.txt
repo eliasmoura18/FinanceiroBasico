@@ -1,0 +1,112 @@
+/** JSON POST **/
+{
+"nome": "Pagou antes de vencer",
+"valorOriginal": 100,
+"dataVencimento": "2021-01-03T23:59:59",
+"dataPagamento": "2021-01-03T14:30:09"
+}
+
+{
+"nome": "Vencido 1 dia facil",
+"valorOriginal": 100,
+"dataVencimento": "2021-01-03T23:59:59",
+"dataPagamento": "2021-01-04T13:00:00"
+}
+
+{
+"nome": "Vencido 4 dias facil",
+"valorOriginal": 100,
+"dataVencimento": "2021-01-03T23:59:59",
+"dataPagamento": "2021-01-07T14:17:00"
+}
+
+{
+"nome": "Vencido 10 dias facil",
+"valorOriginal": 100,
+"dataVencimento": "2021-01-03T23:59:59",
+"dataPagamento": "2021-01-13T09:08:19"
+}
+
+{
+"nome": "Vencido 2 dias quebrado",
+"valorOriginal": 234.55,
+"dataVencimento": "2021-01-03T23:59:59",
+"dataPagamento": "2021-01-05T11:00:55"
+}
+
+{
+"nome": "Vencido 5 dias quebrado",
+"valorOriginal": 57.99,
+"dataVencimento": "2021-01-03T23:59:59",
+"dataPagamento": "2021-01-08T16:27:52"
+}
+
+{
+"nome": "Vencido 20 dias quebrado",
+"valorOriginal": 500.87,
+"dataVencimento": "2021-01-03T23:59:59",
+"dataPagamento": "2021-01-23T15:13:42"
+}
+
+
+
+
+
+
+
+
+
+
+
+/** JSON GET **/
+[
+{
+"nome": "Pagou antes de vencer",
+"valorOriginal": 100,
+"valorCorrigido": 100,
+"qtdeDiasAtraso": 0,
+"dataPagamento": "2021-01-03T14:30:09"
+},
+{
+"nome": "Vencido 1 dia facil",
+"valorOriginal": 100,
+"valorCorrigido": 102.1,
+"qtdeDiasAtraso": 1,
+"dataPagamento": "2021-01-04T13:00:00"
+},
+{
+"nome": "Vencido 4 dias facil",
+"valorOriginal": 100,
+"valorCorrigido": 103.8,
+"qtdeDiasAtraso": 4,
+"dataPagamento": "2021-01-07T14:17:00"
+},
+{
+"nome": "Vencido 10 dias facil",
+"valorOriginal": 100,
+"valorCorrigido": 108,
+"qtdeDiasAtraso": 10,
+"dataPagamento": "2021-01-13T09:08:19"
+},
+{
+"nome": "Vencido 2 dias quebrado",
+"valorOriginal": 234.55,
+"valorCorrigido": 239.71,
+"qtdeDiasAtraso": 2,
+"dataPagamento": "2021-01-05T11:00:55"
+},
+{
+"nome": "Vencido 5 dias quebrado",
+"valorOriginal": 57.99,
+"valorCorrigido": 60.31,
+"qtdeDiasAtraso": 5,
+"dataPagamento": "2021-01-08T16:27:52"
+},
+{
+"nome": "Vencido 20 dias quebrado",
+"valorOriginal": 500.87,
+"valorCorrigido": 555.97,
+"qtdeDiasAtraso": 20,
+"dataPagamento": "2021-01-23T15:13:42"
+}
+]

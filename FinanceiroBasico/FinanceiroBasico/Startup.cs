@@ -6,6 +6,7 @@ using FinanceiroBasico.Business;
 using FinanceiroBasico.Business.Implementation;
 using FinanceiroBasico.Model.Context;
 using FinanceiroBasico.Repository;
+using FinanceiroBasico.Repository.Generic;
 using FinanceiroBasico.Repository.Implementation;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -41,6 +42,7 @@ namespace FinanceiroBasico
 
             services.AddScoped<IContaBusiness, ContaBusiness>();
             services.AddScoped<IContaRepository, ContaRepository>();
+            services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

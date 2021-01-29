@@ -7,6 +7,7 @@ using FinanceiroBasico.Business;
 using FinanceiroBasico.Business.Implementation;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using FinanceiroBasico.Data.VO;
 
 namespace FinanceiroBasico.Controllers
 {
@@ -41,8 +42,8 @@ namespace FinanceiroBasico.Controllers
             return Ok(conta);
         }
 
-        [HttpPost("{id}")]
-        public IActionResult Post([FromBody] Conta conta)
+        [HttpPost]
+        public IActionResult Post([FromBody] ContaVO conta)
         {
             if (conta == null)
                 return BadRequest();
@@ -51,19 +52,25 @@ namespace FinanceiroBasico.Controllers
         }
 
         [HttpPut("{id}")]
-        public IActionResult Put([FromBody] Conta conta)
+        public IActionResult Put([FromBody] ContaVO conta)
         {
-            if (conta == null)
-                return BadRequest();
+            return BadRequest();
+            
+            //O código abaixo foi implementado e funcional, mas como não fazia parte da proposta, está comentado
+            //if (conta == null)
+            //    return BadRequest();
 
-            return Ok(_contaBusiness.Update(conta));
+            //return Ok(_contaBusiness.Update(conta));
         }
 
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
-            _contaBusiness.Delete(id);
-            return NoContent();
+            return BadRequest();
+
+            //O código abaixo foi implementado e funcional, mas como não fazia parte da proposta, está comentado
+            //_contaBusiness.Delete(id);
+            //return NoContent();
         }
 
     }

@@ -1,4 +1,5 @@
-﻿using FinanceiroBasico.Model;
+﻿using FinanceiroBasico.Data.VO;
+using FinanceiroBasico.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,10 +9,10 @@ namespace FinanceiroBasico.Business
 {
     public interface IContaBusiness
     {
-        Conta Create(Conta conta);
-        Conta FindById(int id);
-        List<Conta> FindAll();
-        Conta Update(Conta conta);
+        ContaPagaVO FindById(int id);
+        List<ContaPagaVO> FindAll();
+        ContaPagaVO Create(ContaVO conta);
+        ContaVO Update(ContaVO conta);
         void Delete(int id);
     }
 }
